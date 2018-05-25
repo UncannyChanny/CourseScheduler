@@ -1,4 +1,4 @@
-import { FETCH_COURSES, REMOVE_COURSE } from './types';
+import { FETCH_COURSES, REMOVE_COURSE, ADD_COURSE } from './types';
 
 export function fetchCourses() {
     return {

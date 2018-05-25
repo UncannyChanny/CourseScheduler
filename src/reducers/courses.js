@@ -1,4 +1,4 @@
-import { FETCH_COURSES, REMOVE_COURSE } from '../actions/types';
+import { FETCH_COURSES, REMOVE_COURSE, ADD_COURSE } from '../actions/types';
 
 
 export default function(state = [], action) {
@@ -10,6 +10,15 @@ export default function(state = [], action) {
                 ...state.map((course, index) => {
                     if(course == action.payload) {
                         course.enrolled = false
+                    }
+                    return course
+                })
+            ]
+        case ADD_COURSE:
+            return [
+                ...state.map((course, index) => {
+                    if(course == action.payload) {
+                        course.enrolled = true
                     }
                     return course
                 })
