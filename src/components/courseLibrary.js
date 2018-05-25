@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect, dispatch } from 'react-redux';
-import { fetchCourses, addCourse, removeCourse } from '../actions'
+import { fetchCourses, addCourse, removeCourse, toggleDescription } from '../actions'
 
 class CourseLibrary extends Component {
 
@@ -23,11 +23,11 @@ class CourseLibrary extends Component {
                 <div className='course_title-container'>
                     <div className='course_title'>{course.title}</div>
                 </div>
-                <a>arrow</a>
+                <a onClick={() => this.props.toggleDescription(course)}>arrow</a>
                 <a className={`action ${course.enrolled ? 'hide_content' : 'show_content'}`} onClick={() => this.props.addCourse(course)}>add</a>
                 <a className={`action ${course.enrolled ? 'show_content' : 'hide_content'}`} onClick={() => this.props.removeCourse(course)}>remove</a>
             </div>
-            <div className='course_description'>
+            <div className={`course_description ${course.open ? 'show-content' : 'hide-content'} `}>
                 <h6 className='course_description-title'>Course Description</h6>
                 <p>{course.description}</p>
             </div>
@@ -66,6 +66,9 @@ class CourseLibrary extends Component {
         },
         removeCourse:(course) => {
             dispatch(removeCourse(course))
+        },
+        toggleDescription:(course) => {
+            dispatch(toggleDescription(course))
         }
     }
  }
