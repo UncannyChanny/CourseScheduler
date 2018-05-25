@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect, dispatch } from 'react-redux';
 import { fetchCourses, addCourse, removeCourse, toggleDescription } from '../actions'
+import AnimateHeight from 'react-animate-height'
 
 class CourseLibrary extends Component {
 
@@ -27,11 +28,17 @@ class CourseLibrary extends Component {
                 <a className={`action ${course.enrolled ? 'hide_content' : 'show_content'}`} onClick={() => this.props.addCourse(course)}>add</a>
                 <a className={`action ${course.enrolled ? 'show_content' : 'hide_content'}`} onClick={() => this.props.removeCourse(course)}>remove</a>
             </div>
-            <div className={`course_description ${course.open ? 'show-content' : 'hide-content'} `}>
+        <AnimateHeight
+          duration={ 300 }
+          height={ course.open ? 'auto' : '0'}  // see props documentation below
+        >
+         <div className={`course_description `}>
                 <h6 className='course_description-title'>Course Description</h6>
                 <p>{course.description}</p>
-            </div>
+        </div>
 
+        </AnimateHeight>
+            
         </li>
         )
     }
