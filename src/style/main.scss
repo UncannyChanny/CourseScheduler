@@ -13,9 +13,28 @@
 
 .library {
     flex-grow: 2;
-    width: 70%;
+    width: 62%;
     padding: 6rem;
     z-index: 1;
+    height: 100vh;
+}
+
+.schedule {
+    flex-grow: 1;
+    width: 38%;
+    background: linear-gradient(118.95deg, #6F48CE 0%, #32CBE8 100%);
+    height: 100vh;
+    text-align: center;
+    padding: 12rem 6rem;
+}
+
+.schedule-header {
+    border: none;
+    border-left: 1px solid white;
+    color: white;
+    font-size: 20px;
+    font-family: 'Alegreya', serif;
+    line-height: 27px;
 }
 
 .library_header {
@@ -27,12 +46,6 @@
     font-size: 34px;
     font-weight: bold;
     line-height: 47px;
-}
-
-.schedule {
-    flex-grow: 1;
-    width: 30%;
-    background: linear-gradient(118.95deg, #6F48CE 0%, #32CBE8 100%);
 }
 
 ul {
