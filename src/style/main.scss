@@ -69,3 +69,25 @@ ul li {
     font-weight: bold;
     line-height: 22px;
 }
+
+.slot_course {
+    background-color: white;
+    color: black;
+    borderr: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.slot_empty {
+    opacity: 0.75;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-style: dashed;
+    color: white;
+}
+
+.show_content {
+    display: block;
+}
+
+.hide_content {
+    display: none;
+}
