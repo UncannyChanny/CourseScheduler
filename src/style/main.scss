@@ -51,6 +51,7 @@
 ul {
     list-style-type: none;
     margin: 0 25px;
+    margin-top: 50px;
     padding: 0;
     width: 120%;
 }
@@ -81,20 +82,6 @@ ul li {
     font-size: 16px;
     font-weight: bold;
     line-height: 22px;
-}
-
-.slot_course {
-    background-color: white;
-    color: black;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-.slot_empty {
-    opacity: 0.75;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-style: dashed;
-    color: white;
 }
 
 .show_content {

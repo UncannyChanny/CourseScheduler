@@ -10,7 +10,24 @@
     background-color: white;
     color: black;
     border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: all .3s ease;
 
+}
+
+.action {
+    opacity: 0;
+}
+
+.slot_course:hover {
+    .action {
+        opacity: 1;
+    }
+}
+
+.slot_course:hover {
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.21);
+    transform: scale(1.05);
+    transition: all .3s ease;
 }
 
 .slot_empty {
@@ -31,5 +48,9 @@
         font-family: Lato;
         font-size: 16px;
         padding: 4px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
